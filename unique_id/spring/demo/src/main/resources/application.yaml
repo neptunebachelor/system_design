@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:mysql://20.190.33.179:3307/demo?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+    username: jian
+    password: assass
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update   # 可选值: none | update | create | create-drop
+    show-sql: true       # 控制台显示 SQL 语句
+    properties:
+      hibernate:
+        format_sql: true # 格式化输出 SQL
