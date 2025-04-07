@@ -30,6 +30,9 @@ jobs:
           push: true
           tags: ${{ secrets.AZURE_REGISTRY }}/unique-id:latest
 
+      - name: Azure Login
+        uses: Azure/login@v2.3.0
+
       - name: Azure CLI script
         uses: azure/cli@v2
         with:
