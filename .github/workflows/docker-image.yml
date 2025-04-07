@@ -25,6 +25,7 @@ jobs:
       - name: Build and Push Image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./unique_id/spring/demo
+          file: ./unique_id/spring/demo/Dockerfile
           push: true
           tags: ${{ secrets.AZURE_REGISTRY }}/unique-id:latest
