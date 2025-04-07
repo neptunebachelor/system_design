@@ -29,3 +29,11 @@ jobs:
           file: ./unique_id/spring/demo/Dockerfile
           push: true
           tags: ${{ secrets.AZURE_REGISTRY }}/unique-id:latest
+
+      - name: Azure CLI script
+        uses: azure/cli@v2
+        with:
+          azcliversion: latest
+          inlineScript: |
+            az account show
+            az storage -h
