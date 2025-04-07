@@ -2,9 +2,9 @@ spring:
   application:
     name: demo
   datasource:
-    url: jdbc:mysql://20.190.33.179:3307/demo?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
-    username: jian
-    password: assass
+    url: ${DB1_URL}
+    username: ${DB1_USERNAME}
+    password: ${DB1_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
