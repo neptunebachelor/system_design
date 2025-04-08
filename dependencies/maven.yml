@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  maven:
+    image: maven:3.9-eclipse-temurin-21
+    container_name: maven-container
+    volumes:
+      - ../unique_id/spring/demo/:/usr/src/app
+      - ~/.m2:/root/.m2
+    working_dir: /usr/src/app
+    command: tail -f /dev/null
+    restart: always
+    environment:
+      DB1_URL: ${DB1_URL}
+      DB1_USERNAME: ${DB1_USERNAME}
+      DB1_PASSWORD: ${DB1_PASSWORD}
