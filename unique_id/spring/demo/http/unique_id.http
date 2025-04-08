@@ -3,4 +3,4 @@
 GET http://localhost:8080/api/unique-id
 
 ###
-GET https://20.190.33.179:8080/api/unique-id
+GET http://20.190.33.179:8080/api/unique-id
